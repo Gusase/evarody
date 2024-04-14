@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Mona";
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+    src: url("assets/Mona-Sans.woff2") format("woff2");
+  }
+}
+
+html {
+  @apply antialiased bg-zinc-50 dark:bg-black font-mona selection:text-white selection:bg-gray-800;
+}
