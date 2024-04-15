@@ -13,7 +13,7 @@
     ></div>
   </div>
 </div>
-<div class="mx-auto h-full max-w-2xl lg:max-w-5xl">
+<div class="mx-auto h-full max-w-2xl lg:max-w-5xl" id="content">
   <div class="p-5">
     <slot />
   </div>

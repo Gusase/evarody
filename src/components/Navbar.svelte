@@ -31,7 +31,7 @@
   {#each navigations as nav}
     <Link
       to={nav.path}
-      class="text-white hover:underline {active == nav.path ? 'underline' : ''}"
+      class="text-blacks dark:text-white hover:underline {active == nav.path ? 'underline' : ''}"
       >{nav.text}</Link
     >
   {/each}

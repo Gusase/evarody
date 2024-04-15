@@ -19,10 +19,12 @@
         alt="/_"
         loading="lazy"
       />
-      <h1 class="mt-5 text-3xl md:text-4xl text-white text-center font-bold">
+      <h1
+        class="mt-5 text-3xl md:text-4xl dark:text-white text-black text-center font-bold"
+      >
         Gusesa Abida Ghifar
       </h1>
-      <p class="text-gray-300/85 text-center">
+      <p class="text-gray-800/85 dark:text-gray-300/85 text-center">
         17 y-o Bekasi, Indonesia (UTC +07:00).
       </p>
       <SocialMedia />

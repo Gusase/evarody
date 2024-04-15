@@ -12,5 +12,5 @@
 }
 
 html {
-  @apply antialiased bg-zinc-50 dark:bg-black font-mona selection:text-white selection:bg-gray-800;
+  @apply antialiased bg-zinc-100/90 dark:bg-black font-mona selection:text-white selection:bg-gray-800;
 }

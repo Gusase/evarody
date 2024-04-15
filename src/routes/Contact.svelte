@@ -3,7 +3,7 @@
   import Heading from "../components/Heading.svelte";
   import { publicKey, emailAddress } from "../lib/data/contact";
 
-  let coppied: boolean = false;
+  let coppied: boolean, expanded: boolean = false;
 
   const clipboard = async (val: string) => {
     await navigator.clipboard.writeText(val);
@@ -22,10 +22,10 @@
 
   <div class="space-y-3">
     <div
-      class="p-5 bg-black/90 shadow-sm rounded shadow-gray-500 w-full md:w-fit max-w-full"
+      class="p-5 bg-gray-300/90 dark:bg-black/90 shadow-sm rounded shadow-gray-700/80 dark:shadow-gray-500 w-full md:w-fit max-w-full"
     >
       <h5
-        class="mb-0 md:mb-2 text-white inline-flex items-center font-mona75 text-2xl w-full"
+        class="mb-0 md:mb-2 text-black dark:text-white inline-flex items-center font-mona75 text-2xl w-full"
       >
         <span>Email</span>
 
@@ -52,16 +52,16 @@
           </svg>
         </button>
       </h5>
-      <p class="text-gray-300 hidden md:block">
+      <p class="text-gray-950 dark:text-gray-300 hidden md:block">
         {emailAddress}
       </p>
     </div>
 
     <div
-      class="p-5 bg-black/90 shadow-sm rounded shadow-gray-500 w-full md:w-fit max-w-full"
+      class="p-5 bg-gray-300/90 dark:bg-black/90 shadow-sm rounded shadow-gray-700/80 dark:shadow-gray-500 w-full md:w-fit max-w-full"
     >
       <h5
-        class="mb-0 md:mb-2 text-white inline-flex items-center font-mona75 text-2xl w-full"
+        class="mb-0 md:mb-2 text-black dark:text-white inline-flex items-center font-mona75 text-2xl w-full"
       >
         <span>PGP Public Key</span>
         <button
@@ -87,7 +87,18 @@
           </svg>
         </button>
       </h5>
-      <p class="text-gray-300 hidden md:line-clamp-[14]" style="white-space: pre-line;">
+
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+      <p
+        on:click={() => {
+          expanded = !expanded;
+        }}
+        class="text-gray-950 cursor-pointer dark:text-gray-300 max-md:hidden {!expanded
+          ? 'line-clamp-[14]'
+          : 'block'}"
+        style="white-space: pre-line;"
+      >
         {publicKey}
       </p>
     </div>

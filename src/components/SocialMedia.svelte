@@ -10,7 +10,7 @@
       target="_blank"
       aria-label={social.txt}
       ><img
-        class="size-8 group-last:size-7 group-last:mt-px"
+        class="size-8 group-last:size-7 group-last:mt-px invert dark:invert-0"
         src={social.src}
         alt={social.txt}
       /></a
