@@ -15,10 +15,6 @@
       path: "/resume",
     },
     {
-      text: "Blog",
-      path: "/blog",
-    },
-    {
       text: "Contact",
       path: "/contact",
     },

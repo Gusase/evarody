@@ -102,5 +102,12 @@
         {publicKey}
       </p>
     </div>
+
+    <img
+      src="https://counter.lunoxia.net/get/@gusase"
+      class="w-80 mx-auto !mt-14 block md:hidden"
+      alt="Thanks to lunoxia.net for this counter /_\\"
+      loading="lazy"
+    />
   </div>
 </Layout>
