@@ -104,7 +104,7 @@
     </div>
 
     <img
-      src="https://counter.lunoxia.net/get/@evarody_"
+      src="https://counter.lunoxia.net/get/@evarody_?theme=rule34"
       class="w-80 mx-auto !mt-14 block md:hidden"
       alt="Thanks to lunoxia.net for this counter /_\\"
       loading="lazy"
