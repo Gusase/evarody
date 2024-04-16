@@ -23,7 +23,7 @@
   export let active: string;
 </script>
 
-<nav class="sticky top-0 left-0 w-full z-50 flex justify-center space-x-4 p-4">
+<nav class="sticky top-0 left-0 w-full z-10 flex justify-center space-x-4 p-4">
   {#each navigations as nav}
     <Link
       to={nav.path}

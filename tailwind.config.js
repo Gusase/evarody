@@ -24,6 +24,17 @@ export default {
           },
         ],
       },
+      keyframes: {
+        landing: {
+          "0%": { opacity: 0, transform: 'scale(0.97)' },
+          "55%": { opacity: 0.65 },
+          "85%": { opacity: 0.9 },
+          "100%": { opacity: 1, transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        landing: "landing 0.5s linear",
+      },
     },
   },
   plugins: [],
