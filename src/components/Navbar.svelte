@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Link } from "svelte-routing";
+  import { Link as NavLink } from "svelte-routing";
 
   const navigations: { text: string; path: string }[] = [
     {
@@ -25,10 +25,10 @@
 
 <nav class="sticky top-0 left-0 w-full z-10 flex justify-center space-x-4 p-4">
   {#each navigations as nav}
-    <Link
+    <NavLink
       to={nav.path}
-      class="text-blacks dark:text-white hover:underline {active == nav.path ? 'underline' : ''}"
-      >{nav.text}</Link
-    >
+      class="text-blacks dark:text-white hover:underline {active == nav.path ? 'underline' : ''}">
+      {nav.text}
+    </NavLink>
   {/each}
 </nav>

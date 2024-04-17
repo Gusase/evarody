@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Layout from "../components/Layout.svelte";
-  import Heading from "../components/Heading.svelte";
-  import Link from "./Link.svelte";
+  import Layout from "@/components/Layout.svelte";
+  import Heading from "@/components/Heading.svelte";
+  import Link from "@/components/Link.svelte";
 </script>
 
 <Layout>
@@ -12,5 +12,5 @@
     >
   </Heading>
 
-  <Link label="Home" url="/" linkIcon={false} />
+  <Link label="Home" url="/" icon={false} />
 </Layout>

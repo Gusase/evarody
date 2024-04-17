@@ -1,6 +1,6 @@
 <script lang="ts">
   import { useLocation } from "svelte-routing";
-  import Navbar from "./Navbar.svelte";
+  import Navbar from "@/components/Navbar.svelte";
   export let location = useLocation();
 </script>
 

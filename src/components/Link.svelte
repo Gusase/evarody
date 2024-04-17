@@ -1,15 +1,15 @@
 <script lang="ts">
-  export let label: string, url: string, linkIcon: boolean;
+  export let label: string, url: string, icon: boolean;
 </script>
 
 <a
   href={url}
-  target={linkIcon ? "_blank" : "_parent"}
-  class="{linkIcon
+  target={icon ? "_blank" : "_parent"}
+  class="{icon
     ? 'inline-flex justify-center items-center gap-x-1.5'
     : 'inline-block'} max-w-xs w-full rounded-md bg-gray-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
   >{label}
-  {#if linkIcon}
+  {#if icon}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

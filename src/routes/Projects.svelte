@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Layout from "../components/Layout.svelte";
-  import Heading from "../components/Heading.svelte";
+  import Layout from "@/components/Layout.svelte";
+  import Heading from "@/components/Heading.svelte";
 </script>
 
 <Layout>

@@ -34,7 +34,7 @@
       <button
         on:click={() => dispatch("closeModal")}
         type="button"
-        class=" text-black dark:text-gray-100 bg-gray-800 hover:scale-125 transition-all hover:rotate-180 p-5 rounded-full"
+        class="bg-gray-100 text-black dark:text-gray-100 dark:bg-gray-800 hover:scale-125 transition-all hover:rotate-180 p-5 rounded-full"
       >
         <span class="sr-only">Close</span>
         <svg

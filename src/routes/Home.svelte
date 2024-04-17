@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Layout from "../components/Layout.svelte";
-  import SocialMedia from "../components/SocialMedia.svelte";
-  import profile from "../assets/avatar.jpg";
-  import Modal from "../components/Modal.svelte";
+  import Layout from "@/components/Layout.svelte";
+  import SocialMedia from "@/components/SocialMedia.svelte";
+  import profile from "@/assets/avatar.jpg";
+  import Modal from "@/components/Modal.svelte";
   let openModal: boolean;
 </script>
 
@@ -15,7 +15,6 @@
     class="mx-auto max-w-2xl lg:max-w-5xl flex flex-col justify-center items-center min-h-[calc(100vh-96px)]"
   >
     <div class="max-w-2xl space-y-3.5 md:space-y-5">
-
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Router, Route } from "svelte-routing";
-  import Home from "./routes/Home.svelte";
-  import Projects from "./routes/Projects.svelte";
-  import Resume from "./routes/Resume.svelte";
-  import Contact from "./routes/Contact.svelte";
-  import NotFound from "./components/NotFound.svelte";
+  import Home from "@/routes/Home.svelte";
+  import Projects from "@/routes/Projects.svelte";
+  import Resume from "@/routes/Resume.svelte";
+  import Contact from "@/routes/Contact.svelte";
+  import NotFound from "@/components/NotFound.svelte";
 
   export let url: string = "";
 </script>
