@@ -1,6 +1,7 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
+  import Meta from "@/components/META.svelte";
   import { publicKey, emailAddress } from "@/lib/data/contact";
 
   let coppied: boolean, expanded: boolean = false;
@@ -13,6 +14,8 @@
     }, 3000);
   };
 </script>
+
+<Meta title="Contact" />
 
 <Layout>
   <Heading>
@@ -104,7 +107,7 @@
     </div>
 
     <img
-      src="https://counter.lunoxia.net/get/@evarody_?theme=rule34"
+      src="https://counter.lunoxia.net/get/@gusase?theme=rule34"
       class="w-80 mx-auto !mt-14 block md:hidden"
       alt="Thanks to lunoxia.net for this counter /_\\"
       loading="lazy"

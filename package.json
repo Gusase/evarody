@@ -1,5 +1,6 @@
 {
   "name": "v2.evarody",
+  "description" : "Gusase's personal site",
   "private": true,
   "version": "0.0.0",
   "type": "module",

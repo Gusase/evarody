@@ -1,14 +1,15 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import SocialMedia from "@/components/SocialMedia.svelte";
-  import profile from "@/assets/avatar.jpg";
   import Modal from "@/components/Modal.svelte";
+  import Meta from "@/components/META.svelte";
+  import profile from "@/assets/avatar.jpg";
   let openModal: boolean;
 </script>
 
-<svelte:head>
+<Meta title={"Home"}>
   <link rel="preload" href={profile} as="image" />
-</svelte:head>
+</Meta>
 
 <Layout>
   <div
@@ -30,7 +31,7 @@
         Gusesa Abida Ghifar
       </h1>
       <p class="text-gray-800/85 dark:text-gray-300/85 text-center">
-        17 y-o Bekasi, Indonesia (UTC +07:00).
+        17 y/o Bekasi, Indonesia (UTC +07:00).
       </p>
       <SocialMedia />
     </div>
