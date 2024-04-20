@@ -11,6 +11,10 @@
   }
 }
 
+* {
+  @apply transition-colors duration-200;
+}
+
 html {
   @apply antialiased bg-zinc-100/90 dark:bg-black font-mona selection:text-white selection:bg-gray-800;
 }

@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" href="/meta/favicon-16x16.png" sizes="16x16" />
   <link rel="manifest" href="/meta/site.webmanifest" />
   <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={desc} />
   <meta name="language" content="English" />

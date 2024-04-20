@@ -26,7 +26,7 @@
         on:click={() => (openModal = !openModal)}
       />
       <h1
-        class="mt-5 text-3xl md:text-4xl dark:text-white text-black text-center font-bold"
+        class="mt-5 text-3xl md:text-4xl dark:text-white text-black text-center font-bold transition-none"
       >
         Gusesa Abida Ghifar
       </h1>
