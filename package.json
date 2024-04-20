@@ -1,6 +1,6 @@
 {
   "name": "v2.evarody",
-  "description" : "Gusase's personal site",
+  "description": "Gusase's personal site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,5 +23,8 @@
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.42.5"
   }
 }
