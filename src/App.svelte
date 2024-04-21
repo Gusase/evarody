@@ -10,7 +10,7 @@
   export let url: string = "";
 </script>
 
-<main class="relative min-h-dvh">
+<main class="relative min-h-screen">
   <Router {url}>
     <Route path="/" component={Home} />
     <Route path="/projects" component={Projects} />
@@ -23,7 +23,7 @@
   </Router>
 
   <div class="absolute bottom-6 right-6">
-    <a href="/chats" class="bg-white ring-1 ring-gray-300/80 dark:ring-gray-800 dark:bg-zinc-900 p-5 rounded-full inline-block hover:scale-125 transition">
+    <a href="/chats" class="bg-white ring-1 ring-gray-300/80 dark:ring-gray-800 dark:bg-zinc-900 p-5 rounded-full inline-block hover:scale-125 transition" target="_blank">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
