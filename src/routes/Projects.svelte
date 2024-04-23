@@ -1,10 +1,7 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
-  import Meta from "@/components/META.svelte";
 </script>
-
-<Meta title="Projects" />
 
 <Layout>
   <Heading>

@@ -1,7 +1,6 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
-  import Meta from "@/components/META.svelte";
   import { publicKey, emailAddress } from "@/lib/data/contact";
 
   let coppied: boolean, expanded: boolean = false;
@@ -14,8 +13,6 @@
     }, 3000);
   };
 </script>
-
-<Meta title="Contact" />
 
 <Layout>
   <Heading>

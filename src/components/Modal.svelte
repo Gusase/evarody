@@ -1,5 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
+  import { fade } from "svelte/transition";
 
   const dispatch = createEventDispatcher();
 
@@ -12,8 +13,11 @@
   aria-labelledby="modal-title"
   role="dialog"
   aria-modal="true"
+  transition:fade={{ delay: 50, duration: 100 }}
 >
-  <div class="fixed inset-0 bg-gray-600 bg-opacity-75 backdrop-blur-sm transition-opacity"></div>
+  <div
+    class="fixed inset-0 bg-gray-600 bg-opacity-75 backdrop-blur-sm transition-opacity"
+  ></div>
 
   <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div

@@ -1,7 +1,6 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
-  import Meta from "@/components/META.svelte";
   import { createClient } from "@supabase/supabase-js";
   import { type Database, type Chat } from "@/lib/database-type";
   import { onMount } from "svelte";
@@ -63,8 +62,6 @@
     };
   });
 </script>
-
-<Meta title="Chats" />
 
 <Layout>
   <Heading>
