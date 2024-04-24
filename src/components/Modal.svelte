@@ -32,6 +32,7 @@
             {src}
             alt="/_"
             loading="lazy"
+            draggable="false"
           />
         </div>
       </div>

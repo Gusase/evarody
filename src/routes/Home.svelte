@@ -23,6 +23,7 @@
         src={profile}
         alt="/_"
         loading="lazy"
+        draggable="false"
         on:click={() => (openModal = !openModal)}
       />
       <h1
