@@ -5,7 +5,8 @@
 
 <Layout>
   <Heading>
-    <span slot="header">Sorry, This content is not available yet.</span>
-    <span slot="subheader">Or may not be ready to be shared yet</span>
+    <span slot="header">Not available</span>
+    <span slot="subheader">//</span>
   </Heading>
 </Layout>
+

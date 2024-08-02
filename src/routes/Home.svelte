@@ -13,26 +13,27 @@
 
 <Layout>
   <div
-    class="mx-auto max-w-2xl lg:max-w-5xl flex flex-col justify-center items-center min-h-[calc(100vh-96px)]"
+    class="mx-auto max-w-2xl lg:max-w-5xl flex flex-col justify-center items-center h-full"
   >
-    <div class="max-w-2xl space-y-3.5 md:space-y-5">
+    <div class="w-full space-y-3.5 md:space-y-5">
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img
         class="size-40 mx-auto rounded-full animate-landing cursor-pointer ring ring-gray-600 hover:ring-gray-800 active:scale-[0.98] transition-all"
         src={profile}
-        alt="/_"
+        alt="my pfp"
         loading="lazy"
         draggable="false"
         on:click={() => (openModal = !openModal)}
       />
       <h1
-        class="mt-5 text-3xl md:text-4xl dark:text-white text-black text-center font-bold transition-none"
+        class="mt-5 text-2xl md:text-3xl dark:text-white text-black text-center font-bold transition-none"
       >
         Gusesa Abida Ghifar
       </h1>
-      <p class="text-gray-800/85 dark:text-gray-300/85 text-center">
-        {age()} y/o Bekasi, Indonesia (UTC +07:00).
+      <p class="text-gray-800/85 text-sm md:text-base dark:text-gray-300/85 text-center whitespace-pre-line">
+        {age()} y'o // Informatics Engineering student.
+        (UTC +07:00)
       </p>
       <SocialMedia />
     </div>

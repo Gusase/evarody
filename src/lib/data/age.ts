@@ -1,19 +1,24 @@
 import moment from "moment";
 
-const birthYear: number = 2006;
-const birthDayMonth: Array<number> = [22, 9];
-const year: number = moment().year();
-const date: Array<string> = moment().format("DD MM").split(" ");
+const BIRTH_YEAR: number = 2006;
+const BIRTH_DAY: number = 22;
+const BIRTH_MONTH: number = 9;
 
 export const yo = (): number => {
-  const passedDate: boolean =
-    (birthDayMonth[1] == parseInt(date[1]) ||
-      birthDayMonth[1] < parseInt(date[1])) &&
-    (birthDayMonth[0] == parseInt(date[0]) ||
-      parseInt(date[0]) > birthDayMonth[0]);
-  let age: number = year - birthYear;
+  const currentDate = moment();
+  const currentYear: number = currentDate.year();
+  const currentDay: number = currentDate.date();
+  const currentMonth: number = currentDate.month() + 1; // moment months are 0-indexed
 
-  passedDate ? age : age--;
+  const hasBirthdayPassed: boolean =
+    currentMonth > BIRTH_MONTH ||
+    (currentMonth === BIRTH_MONTH && currentDay >= BIRTH_DAY);
 
-  return age;
+  let currentAge: number = currentYear - BIRTH_YEAR;
+
+  if (!hasBirthdayPassed) {
+    currentAge--;
+  }
+
+  return currentAge;
 };

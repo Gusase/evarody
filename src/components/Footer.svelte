@@ -1,12 +1,8 @@
-<script lang="ts">
-  import moment from "moment";
-</script>
-
-<footer class="my-5">
+<footer>
   <div
-    class="flex text-xs lg:text-sm opacity-70 mx-auto text-center flex-col items-center justify-center gap-2"
+    class="flex basis-auto pb-2  text-xs lg:text-sm opacity-70 mx-auto text-center flex-col items-center justify-center gap-2"
   >
-    <p>© {moment().year()} Gusesa.</p>
-    <p class="-mt-2.5">Licensed under MIT License.</p>
+    <p>© 2024 - until i hate Evangelion (never) • Gusesa.</p>
+    <p class="-mt-2.5">Licensed under MIT.</p>
   </div>
 </footer>

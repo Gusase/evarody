@@ -2,7 +2,6 @@ import telegram from "../../assets/telegram.svg";
 import github from "../../assets/github.svg";
 import linkedin from "../../assets/linkedin.svg";
 import mastodon from "../../assets/mastodon.svg";
-import instagram from "../../assets/instagram.svg";
 
 type Social = {
   txt: string;
@@ -30,10 +29,5 @@ export const socials: Social[] = [
     txt: "Mastodon",
     src: mastodon,
     link: "https://mastodon.social/@gusase",
-  },
-  {
-    txt: "Instagram",
-    src: instagram,
-    link: "https://www.instagram.com/gusesa.gag",
   },
 ];

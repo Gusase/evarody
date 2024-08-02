@@ -24,7 +24,7 @@
 </script>
 
 <nav
-  class="sticky top-0 left-0 w-full z-10 flex justify-center space-x-4 p-4 dark:bg-zinc-900/85 md:!bg-transparent backdrop-blur-sm md:backdrop-blur-none bg-white/85"
+  class="flex justify-center basis-16  space-x-4 p-4 pb-0 bg-transparent backdrop-blur-sm md:backdrop-blur-none" 
 >
   {#each navigations as nav}
     <NavLink

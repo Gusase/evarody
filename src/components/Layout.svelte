@@ -1,29 +1,20 @@
 <script lang="ts">
   import { useLocation } from "svelte-routing";
   import Navbar from "@/components/Navbar.svelte";
-  import { fade } from "svelte/transition";
   import Footer from "@/components/Footer.svelte";
   export let location = useLocation();
-
-  $: document.title = `${$location.pathname} - Gusase /_ \\`;
 </script>
 
-<Navbar active={$location.pathname} />
-
 <div
-  class="fixed inset-0 flex justify-center sm:px-8 -z-[1]"
-  in:fade={{ duration: 1000 }}
+  class="mx-auto max-w-screen-sm flex flex-col space-y-2 h-screen max-md:px-2"
 >
-  <div class="flex w-full max-w-7xl lg:px-8">
-    <div
-      class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"
-    ></div>
+  <Navbar active={$location.pathname} />
+  <div
+    class=" bg-white/10 border-t rounded-lg basis-full flex-shrink overflow-y-hidden border-t-gray-300/70 w-full overflow-x-hidden min-h-0"
+  >
+    <div class="p-5 overflow-y-auto h-full">
+      <slot />
+    </div>
   </div>
-</div>
-<div class="mx-auto h-full max-w-2xl lg:max-w-5xl">
-  <div class="p-5">
-    <slot />
-  </div>
-  
   <Footer />
 </div>

@@ -4,19 +4,17 @@
   import Projects from "@/routes/Projects.svelte";
   import Resume from "@/routes/Resume.svelte";
   import Contact from "@/routes/Contact.svelte";
-  import Chat from "@/routes/Chat.svelte";
   import NotFound from "@/components/NotFound.svelte";
 
   export let url: string = "";
 </script>
 
-<main class="relative min-h-screen">
+<main class="relative"> 
   <Router {url}>
     <Route path="/" component={Home} />
     <Route path="/projects" component={Projects} />
     <Route path="/resume" component={Resume} />
     <Route path="/contact" component={Contact} />
-    <Route path="/chats" component={Chat} />
     <Route>
       <NotFound />
     </Route>
