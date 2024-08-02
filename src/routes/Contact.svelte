@@ -52,7 +52,7 @@
           title="Copy public key"
           class="ml-auto active:*:fill-white/90 hover:*:stroke-gray-800 focus:*:fill-white/90 hover:*:fill-white/90"
           on:click={() => {
-            clipboard(key.val);
+            clipboard(key.value);
           }}
         >
           <span class="underline underline-offset-2">{key.name}</span>

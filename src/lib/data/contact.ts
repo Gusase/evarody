@@ -4,7 +4,6 @@ interface Keys {
 }
 
 const publicSSH: string = `
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL4SH8zQAZ5jCGg2+udGA6vqZuA6w0X271x9eOEwKANY
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCXWVpb6PiD/kWAwPoHFOaQiiz1gJFCglBFC8DvZTIboWXZ1FGDnOYjzDRAiymgY1hy389F5CFriMhFR3k1w5T55+tj2PgB2Be6Xahxy0Y2daAKZ32G26fpPO2/Wfe5/9x9zt6ZXYSEVLFr6VzZnrTvjDkC5WMhegTL2P1RONKYAGDDYIcwX/553RiGFY7MlhfxmfkBY3rN+FsLHzNw2sTvEFIRWr0xkwD+F3sDwBadPXP2OQ92YQGENORAtAJgyVjtY+d971Cy1UCD4flT3M6u0ksfU/vzI7PFzB++LDTWoSFtJdsnwOlxwZPCpUJdqKnoNMNFMtIZ9+d6KtDaA1YV93sAOFBVwX5vCeItDdP0pywEERWuJOoKomLQ+7mReXFjPiKNgmZEdLcWYqh5+EK7S/Jgsbs+RdVVzqptB+m4FaF5oEim/vz7xbSJqLGGqZdKpnit5c2fkWJnRn7+eZFO8wyyz0bq6M0xg2W46MT5ug0JslkSwhgmI2xcUoEg/9IRJh9WvWGv0oRH2IWhA8WoZSaDzpRPTTvsL3+XTaaqG8eSy6D4AHUmdwbUimolrMSkF/VzbICMNC/4MZD1V93xjEc9NvoB1Z0LpTCaLtKRK9fFoXav9VLnVO2OT2Ei7MmpVKvzjwg6OPvbyAf5OF6jUicMGFAzFAtqIg2hPgoMbw==
 `;
  const publicGPG: string = `
@@ -105,6 +104,7 @@ YFveL4NhSMzSn/o=
 =jmUI
 -----END PGP PUBLIC KEY BLOCK-----
 `;
+
 export const emailAddresses: string[] = ["abidaghifar@gmail.com", "abidaghifar@proton.me"];
 export const publicKeys: Keys[] = [
   {
