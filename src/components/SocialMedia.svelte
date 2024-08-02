@@ -3,18 +3,21 @@
 </script>
 
 <div class="mt-5 flex justify-center">
-  {#each socials as social}
-    <a
-      class="mx-2 group"
-      href={social.link}
-      target="_blank"
-      aria-label={social.txt}
+  {#each Object.entries(socials) as [platform, social]}
+    {#if social.visibleOnMainpage}
+      <a 
+        class="mx-2 group"
+        href={social.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={platform}
       >
-      <img
-        class="size-8 group-last:size-7 group-last:mt-px invert dark:invert-0"
-        src={social.src}
-        alt={social.txt}
-      />
-    </a>
+        <img
+          class="size-6 invert-0 dark:invert transition hover:opacity-45"
+          src={social.src}
+          alt={platform}
+        />
+      </a>
+    {/if}
   {/each}
 </div>

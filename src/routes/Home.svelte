@@ -32,7 +32,7 @@
         Gusesa Abida Ghifar
       </h1>
       <p class="text-gray-800/85 text-sm md:text-base dark:text-gray-300/85 text-center whitespace-pre-line">
-        {age()} y'o // Informatics Engineering student.
+        {age()} y'o Informatics Engineering student.
         (UTC +07:00)
       </p>
       <SocialMedia />

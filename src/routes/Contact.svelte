@@ -2,6 +2,7 @@
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
   import { publicKeys, emailAddresses } from "@/lib/data/contact";
+  import { socials } from "@/lib/data/social";
 
   let coppied: boolean = false;
 
@@ -25,6 +26,28 @@
   <div>
     <h3
       class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"
+    >
+      Others
+    </h3>
+    <div class="space-y-px">
+      {#each Object.entries(socials) as [platform, social]}
+        {#if !social.visibleOnMainpage}
+          <a
+            class="flex text-sm font-medium underline underline-offset-2 text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500"
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={platform}
+          >
+            {social.platform}
+          </a>
+        {/if}
+      {/each}
+    </div>
+  </div>
+  <div>
+    <h3
+      class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 border-t border-zinc-100 pt-6 mt-6 dark:border-zinc-700/40"
     >
       Mailto
     </h3>
