@@ -86,10 +86,4 @@
       </span>
     {/each}
   </div>
-  <img
-    src="https://counter.lunoxia.net/get/@gusase?theme=rule34"
-    class="w-80 mx-auto !mt-14 block md:hidden"
-    alt="Thanks to lunoxia.net for this counter /_\\"
-    loading="lazy"
-  />
 </Layout>
