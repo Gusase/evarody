@@ -24,12 +24,13 @@
 </script>
 
 <nav
-  class="flex justify-center basis-16  space-x-4 p-4 pb-0 bg-transparent backdrop-blur-sm md:backdrop-blur-none" 
+  class="flex justify-center basis-16 max-md:items-center space-x-4 p-4 pb-0 bg-transparent backdrop-blur-sm md:backdrop-blur-none" 
 >
   {#each navigations as nav}
     <NavLink
       to={nav.path}
-      class="text-blacks dark:text-white hover:underline {active == nav.path
+      data-sveltekit-reload
+      class="text-black dark:text-white hover:underline {active == nav.path
         ? 'underline'
         : ''}"
     >
