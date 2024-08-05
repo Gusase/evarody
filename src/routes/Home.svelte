@@ -1,10 +1,8 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import SocialMedia from "@/components/SocialMedia.svelte";
-  import Modal from "@/components/Modal.svelte";
   import profile from "@/assets/avatar.jpg";
   import { yo as age } from "@/lib/data/age";
-  let openModal: boolean;
 </script>
 
 <svelte:head>
@@ -16,30 +14,25 @@
     class="mx-auto max-w-2xl lg:max-w-5xl flex flex-col justify-center items-center h-full"
   >
     <div class="w-full space-y-3.5 md:space-y-5">
-      <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img
-        class="size-40 mx-auto rounded-full animate-landing cursor-pointer ring ring-gray-600 hover:ring-gray-800 active:scale-[0.98] transition-all"
+        class="size-40 mx-auto rounded-full ring ring-gray-600"
         src={profile}
         alt="my pfp"
         loading="lazy"
         draggable="false"
-        on:click={() => (openModal = !openModal)}
       />
       <h1
-        class="mt-5 text-2xl md:text-3xl dark:text-white text-black text-center font-bold transition-none"
+        class="mt-5 text-2xl md:text-3xl dark:text-white text-black text-center font-bold"
       >
         Gusesa Abida Ghifar
       </h1>
-      <p class="text-gray-800/85 text-sm md:text-base dark:text-gray-300/85 text-center whitespace-pre-line">
+      <p
+        class="text-gray-800/85 text-sm md:text-base dark:text-gray-300/85 text-center whitespace-pre-line"
+      >
         {age()} y'o Informatics Engineering student.
-        (UTC +07:00)
+        (UTC+7)
       </p>
       <SocialMedia />
     </div>
   </div>
-
-  {#if openModal}
-    <Modal src={profile} on:closeModal={() => (openModal = !openModal)} />
-  {/if}
 </Layout>
