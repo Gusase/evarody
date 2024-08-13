@@ -3,6 +3,7 @@
   import Heading from "@/components/Heading.svelte";
   import { publicKeys, emailAddresses } from "@/lib/data/contact";
   import { socials } from "@/lib/data/social";
+  import Link from "@/components/Link.svelte";
 
   let coppied: boolean = false;
 
@@ -30,17 +31,9 @@
       Others
     </h3>
     <div class="space-y-px">
-      {#each Object.entries(socials) as [platform, social]}
+      {#each socials as social}
         {#if !social.visibleOnMainpage}
-          <a
-            class="flex text-sm font-medium underline underline-offset-2 text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500"
-            href={social.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={platform}
-          >
-            {social.platform}
-          </a>
+          <Link href={social.link} text={social.platform} isExternal={true} />
         {/if}
       {/each}
     </div>
@@ -53,10 +46,7 @@
     </h3>
     <div class="space-y-px">
       {#each emailAddresses as email}
-        <a
-          class="flex text-sm font-medium underline underline-offset-2 text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500"
-          href="mailto:{email}"><span>{email}</span></a
-        >
+       <Link href="mailto:{email}" text={email} /> 
       {/each}
     </div>
   </div>
@@ -73,7 +63,6 @@
       >
         <button
           title="Copy public key"
-          class="ml-auto active:*:fill-white/90 hover:*:stroke-gray-800 focus:*:fill-white/90 hover:*:fill-white/90"
           on:click={() => {
             clipboard(key.value);
           }}

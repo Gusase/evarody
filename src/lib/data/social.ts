@@ -4,14 +4,16 @@ import mastodon from "@/assets/mastodon.svg";
 import linkedin from "@/assets/linkedin.svg"
 import x from "@/assets/x.svg";
 import instagram from "@/assets/instagram.svg";
+import facebook from "@/assets/facebook.svg";
 
 enum SocialPlatform {
   GitHub = "GitHub",
   Telegram = "Telegram",
   Mastodon = "Mastodon",
   Linkedin = "LinkedIn",
-  X = "X (formerly Twitter)",
-  Instagram = "Instagram"
+  X = "X (fka Twitter)",
+  Instagram = "Instagram",
+  Facebook = "Facebook",
 }
 
 type Social = {
@@ -27,7 +29,7 @@ export const socials: Social[] = [
     src: github,
     link: "https://github.com/gusase",
     visibleOnMainpage: true,
-  },,
+  },
   {
     platform: SocialPlatform.Telegram,
     src: telegram,
@@ -57,5 +59,11 @@ export const socials: Social[] = [
     src: instagram,
     link: "https://www.instagram.com/gusesa.gag",
     visibleOnMainpage: false,
-  }
+  },
+  {
+    platform: SocialPlatform.Facebook,
+    src: facebook,
+    link: "https://www.facebook.com/gusase35",
+    visibleOnMainpage:false,
+  },
 ];

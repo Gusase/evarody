@@ -11,7 +11,7 @@
 
 <Layout>
   <div
-    class="mx-auto max-w-2xl lg:max-w-5xl flex flex-col justify-center items-center h-full"
+    class="mx-auto flex flex-col justify-center items-center h-full"
   >
     <div class="w-full space-y-3.5 md:space-y-5">
       <img

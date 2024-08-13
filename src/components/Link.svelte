@@ -1,28 +1,35 @@
 <script lang="ts">
-  export let label: string, url: string, icon: boolean;
+  export let href: string;
+  export let text: string;
+  export let isExternal: boolean = false;
+
+  $: target = isExternal ? "_blank" : null;
+  $: rel = isExternal ? "noopener noreferrer" : null;
 </script>
 
 <a
-  href={url}
-  target={icon ? "_blank" : "_parent"}
-  class="{icon
-    ? 'inline-flex justify-center items-center gap-x-1.5'
-    : 'inline-block'} max-w-xs w-full rounded-md bg-gray-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-  >{label}
-  {#if icon}
+  href={href}
+  class="flex items-center text-sm font-medium underline underline-offset-2 text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500 {isExternal
+    ? 'pr-1'
+    : ''}"
+  target={target}
+  rel={rel}
+>
+  <span>{text}</span>
+  {#if isExternal}
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 ml-1"
       fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
       stroke="currentColor"
-      class="size-5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-      />
+        stroke-width="2"
+        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+      ></path>
     </svg>
   {/if}
 </a>
