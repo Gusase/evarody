@@ -13,7 +13,7 @@
         aria-label={platform}
       >
         <img
-          class="size-6 invert-0 dark:invert transition hover:opacity-45"
+          class="size-6 invert-0 dark:invert transition hover:opacity-55"
           src={social.src}
           alt={platform}
         />

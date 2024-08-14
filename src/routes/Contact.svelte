@@ -3,7 +3,7 @@
   import Heading from "@/components/Heading.svelte";
   import { publicKeys, emailAddresses } from "@/lib/data/contact";
   import { socials } from "@/lib/data/social";
-  import Link from "@/components/Link.svelte";
+    import Link from "@/components/Link.svelte";
 
   let coppied: boolean = false;
 
@@ -33,7 +33,14 @@
     <div class="space-y-px">
       {#each socials as social}
         {#if !social.visibleOnMainpage}
-          <Link href={social.link} text={social.platform} isExternal={true} />
+          <div class="flex items-center gap-x-1.5">
+            <img
+              src={social.src}
+              alt={`${social.platform} icon`}
+              class="w-3 h-3 invert-0 dark:invert transition group-hover:opacity-45"
+            />
+            <Link href={social.link} text={social.platform} />
+          </div>
         {/if}
       {/each}
     </div>
@@ -46,7 +53,7 @@
     </h3>
     <div class="space-y-px">
       {#each emailAddresses as email}
-       <Link href="mailto:{email}" text={email} /> 
+        <Link href="mailto:{email}" text={email} />
       {/each}
     </div>
   </div>
