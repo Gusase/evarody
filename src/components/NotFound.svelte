@@ -1,6 +1,7 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
+  import Link from "@/components/Link.svelte";
 </script>
 
 <Layout>
@@ -11,8 +12,5 @@
     >
   </Heading>
 
-  <a
-    class="flex text-sm font-medium underline underline-offset-2 text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500"
-    href="/"><span>Go to home page</span></a
-  >
+  <Link href="/" text="Go to home page" /> 
 </Layout>

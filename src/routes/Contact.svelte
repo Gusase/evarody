@@ -3,7 +3,7 @@
   import Heading from "@/components/Heading.svelte";
   import { publicKeys, emailAddresses } from "@/lib/data/contact";
   import { socials } from "@/lib/data/social";
-    import Link from "@/components/Link.svelte";
+  import Link from "@/components/Link.svelte";
 
   let coppied: boolean = false;
 
@@ -51,7 +51,7 @@
     >
       Mailto
     </h3>
-    <div class="space-y-px">
+    <div class="inline-flex flex-col">
       {#each emailAddresses as email}
         <Link href="mailto:{email}" text={email} />
       {/each}
@@ -65,19 +65,20 @@
       Keys
     </h3>
     {#each publicKeys as key, i (key.name)}
-      <span
-        class="text-sw font-medium text-zinc-800 transition hover:text-zinc-500 dark:text-zinc-200 dark:hover:text-zinc-500 font-mona75"
-      >
+      <span class="text-xs font-medium">
         <button
           title="Copy public key"
           on:click={() => {
             clipboard(key.value);
           }}
         >
-          <span class="underline underline-offset-2">{key.name}</span>
-          {#if i < publicKeys.length - 1}
-            |
-          {/if}
+          <span
+            class="border-b border-zinc-400/85 dark:border-zinc-500/85 hover:border-zinc-800 dark:hover:border-zinc-200 text-zinc-800 transition hover:text-zinc-500/85 dark:text-zinc-200 dark:hover:text-zinc-300/85"
+            >{key.name}</span
+          >
+          <span style="all: initial !important;">
+            {#if i < publicKeys.length - 1}•{/if}
+          </span>
         </button>
       </span>
     {/each}
