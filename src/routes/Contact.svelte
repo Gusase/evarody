@@ -1,7 +1,7 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
-  import { publicKeys, emailAddresses } from "@/lib/data/contact";
+  import { publicKey, emailAddresses } from "@/lib/data/contact";
   import { socials } from "@/lib/data/social";
   import Link from "@/components/Link.svelte";
 
@@ -64,23 +64,18 @@
     >
       Keys
     </h3>
-    {#each publicKeys as key, i (key.name)}
-      <span class="text-xs font-medium">
-        <button
-          title="Copy public key"
-          on:click={() => {
-            clipboard(key.value);
-          }}
+    <span class="text-xs font-medium">
+      <button
+        title="Copy public key"
+        on:click={() => {
+          clipboard(publicKey.value);
+        }}
+      >
+        <span
+          class="border-b border-zinc-400/85 dark:border-zinc-500/85 hover:border-zinc-800 dark:hover:border-zinc-200 text-zinc-800 transition hover:text-zinc-500/85 dark:text-zinc-200 dark:hover:text-zinc-300/85"
+          >{publicKey.name}</span
         >
-          <span
-            class="border-b border-zinc-400/85 dark:border-zinc-500/85 hover:border-zinc-800 dark:hover:border-zinc-200 text-zinc-800 transition hover:text-zinc-500/85 dark:text-zinc-200 dark:hover:text-zinc-300/85"
-            >{key.name}</span
-          >
-          <span style="all: initial !important;">
-            {#if i < publicKeys.length - 1}•{/if}
-          </span>
-        </button>
-      </span>
-    {/each}
+      </button>
+    </span>
   </div>
 </Layout>
