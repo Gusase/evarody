@@ -10,9 +10,7 @@
 </svelte:head>
 
 <Layout>
-  <div
-    class="mx-auto flex flex-col justify-center items-center h-full"
-  >
+  <div class="mx-auto flex flex-col justify-center items-center h-full">
     <div class="w-full space-y-3.5 md:space-y-5">
       <img
         class="size-40 mx-auto rounded-full ring ring-gray-600"
@@ -30,7 +28,6 @@
         class="text-gray-800/85 text-sm md:text-base dark:text-gray-300/85 text-center whitespace-pre-line"
       >
         {age()} y'o Informatics Engineering student.
-        (UTC+7)
       </p>
       <SocialMedia />
     </div>
