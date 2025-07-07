@@ -4,11 +4,15 @@
   import Link from "@/components/Link.svelte";
 </script>
 
+<svelte:head>
+  <title>Not Found</title>
+</svelte:head>
+
 <Layout>
   <Heading>
     <span slot="header">Page Not Found</span>
     <span slot="subheader"
-      >The content you are looking for may have been moved or removed.</span
+      >The content you are looking for may have been moved or removed. You can go now..</span
     >
   </Heading>
 

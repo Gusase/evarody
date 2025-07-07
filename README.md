@@ -3,5 +3,5 @@
 <samp>
 Gusesa's personal site.
 
-Licensed in MIT.
+The license is revoked.
 </samp>

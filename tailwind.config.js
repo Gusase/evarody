@@ -23,6 +23,8 @@ export default {
             fontVariationSettings: '"wdth" 125',
           },
         ],
+        scanline: ['"x12y20pxScanLine", monospace'],
+        hud: ['"x14y24pxHeadUpDaisy", monospace'],
       },
     },
   },

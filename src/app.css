@@ -9,6 +9,18 @@
     font-stretch: 75% 125%;
     src: url("assets/Mona-Sans.woff2") format("woff2");
   }
+
+  @font-face {
+    font-family: "x12y20pxScanLine";
+    font-display: swap;
+    src: url("assets/x12y20pxScanLine.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "x14y24pxHeadUpDaisy";
+    font-display: swap;
+    src: url("assets/x14y24pxHeadUpDaisy.ttf") format("truetype");
+  }
 }
 
 * {
@@ -16,5 +28,107 @@
 }
 
 html {
-  @apply antialiased bg-zinc-100/90 dark:bg-black font-mona selection:text-white selection:bg-gray-800;
+  @apply antialiased bg-zinc-100/90 dark:bg-black selection:text-white selection:bg-gray-800;
+}
+
+.shimmer-text {
+  @apply inline-block text-transparent bg-gradient-to-r from-gray-800 via-white to-gray-800 
+          bg-clip-text bg-[length:200%_100%] animate-shimmer 
+          whitespace-pre text-xs leading-none;
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0%;
+    }
+    100% {
+      background-position: -200% 0%;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 0.27861; }
+    5% { opacity: 0.34769; }
+    10% { opacity: 0.23604; }
+    15% { opacity: 0.90626; }
+    20% { opacity: 0.18128; }
+    25% { opacity: 0.83891; }
+    30% { opacity: 0.65583; }
+    35% { opacity: 0.67807; }
+    40% { opacity: 0.26559; }
+    45% { opacity: 0.84693; }
+    50% { opacity: 0.96019; }
+    55% { opacity: 0.08594; }
+    60% { opacity: 0.20313; }
+    65% { opacity: 0.71988; }
+    70% { opacity: 0.53455; }
+    75% { opacity: 0.37288; }
+    80% { opacity: 0.71428; }
+    85% { opacity: 0.70419; }
+    90% { opacity: 0.7003; }
+    95% { opacity: 0.36108; }
+    100% { opacity: 0.24387; }
+  }
+
+  @keyframes textShadow {
+    0% { text-shadow: 0.44px 0 1px rgba(0, 30, 255, 0.5), -0.44px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    5% { text-shadow: 2.79px 0 1px rgba(0, 30, 255, 0.5), -2.79px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    10% { text-shadow: 0.03px 0 1px rgba(0, 30, 255, 0.5), -0.03px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    15% { text-shadow: 0.40px 0 1px rgba(0, 30, 255, 0.5), -0.40px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    20% { text-shadow: 3.48px 0 1px rgba(0, 30, 255, 0.5), -3.48px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    25% { text-shadow: 1.61px 0 1px rgba(0, 30, 255, 0.5), -1.61px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    30% { text-shadow: 0.70px 0 1px rgba(0, 30, 255, 0.5), -0.70px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    35% { text-shadow: 3.90px 0 1px rgba(0, 30, 255, 0.5), -3.90px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    40% { text-shadow: 3.87px 0 1px rgba(0, 30, 255, 0.5), -3.87px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    45% { text-shadow: 2.23px 0 1px rgba(0, 30, 255, 0.5), -2.23px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    50% { text-shadow: 0.08px 0 1px rgba(0, 30, 255, 0.5), -0.08px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    55% { text-shadow: 2.38px 0 1px rgba(0, 30, 255, 0.5), -2.38px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    60% { text-shadow: 2.20px 0 1px rgba(0, 30, 255, 0.5), -2.20px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    65% { text-shadow: 2.86px 0 1px rgba(0, 30, 255, 0.5), -2.86px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    70% { text-shadow: 0.49px 0 1px rgba(0, 30, 255, 0.5), -0.49px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    75% { text-shadow: 1.89px 0 1px rgba(0, 30, 255, 0.5), -1.89px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    80% { text-shadow: 0.08px 0 1px rgba(0, 30, 255, 0.5), -0.08px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    85% { text-shadow: 0.10px 0 1px rgba(0, 30, 255, 0.5), -0.10px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    90% { text-shadow: 3.44px 0 1px rgba(0, 30, 255, 0.5), -3.44px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    95% { text-shadow: 2.18px 0 1px rgba(0, 30, 255, 0.5), -2.18px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+    100% { text-shadow: 2.62px 0 1px rgba(0, 30, 255, 0.5), -2.62px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
+  }
+
+  .animate-text-shadow {
+    animation: textShadow 1.6s infinite;
+  }
+
+  .crt::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+  }
+
+  .crt::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background:
+      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+      linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .crt {
+    animation: textShadow 1.6s infinite;
+  }
 }

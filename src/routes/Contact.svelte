@@ -1,27 +1,21 @@
 <script lang="ts">
   import Layout from "@/components/Layout.svelte";
   import Heading from "@/components/Heading.svelte";
-  import { publicKey, emailAddresses } from "@/lib/data/contact";
+  import { emailAddresses } from "@/lib/data/contact";
   import { socials } from "@/lib/data/social";
   import Link from "@/components/Link.svelte";
-
-  let coppied: boolean = false;
-
-  const clipboard = async (val: string) => {
-    await navigator.clipboard.writeText(val);
-    coppied = true;
-    setTimeout(() => {
-      coppied = false;
-    }, 3000);
-  };
 </script>
+
+<svelte:head>
+  <title>Contact • Evarody</title>
+</svelte:head>
 
 <Layout>
   <Heading>
     <span slot="header">Contact</span>
-    <span slot="subheader"
-      >{coppied ? "Copied to clipboard!" : "Get in touch."}</span
-    >
+    <span slot="subheader">
+      Looking for a way to reach me? Here's the place. (Don't waste your time.)
+    </span>
   </Heading>
 
   <div>
@@ -33,11 +27,11 @@
     <div class="space-y-px">
       {#each socials as social}
         {#if !social.visibleOnMainpage}
-          <div class="flex items-center gap-x-1.5">
+          <div class="flex items-center gap-x-1.5 group">
             <img
               src={social.src}
               alt={`${social.platform} icon`}
-              class="w-3 h-3 invert-0 dark:invert transition group-hover:opacity-45"
+              class="w-3 h-3 invert-0 dark:invert transition group-hover:opacity-45 group-hover:blur-[1px]"
             />
             <Link href={social.link} text={social.platform} />
           </div>
@@ -64,18 +58,6 @@
     >
       Keys
     </h3>
-    <span class="text-xs font-medium">
-      <button
-        title="Copy public key"
-        on:click={() => {
-          clipboard(publicKey.value);
-        }}
-      >
-        <span
-          class="border-b border-zinc-400/85 dark:border-zinc-500/85 hover:border-zinc-800 dark:hover:border-zinc-200 text-zinc-800 transition hover:text-zinc-500/85 dark:text-zinc-200 dark:hover:text-zinc-300/85"
-          >{publicKey.name}</span
-        >
-      </button>
-    </span>
+    <p class="text-gray-500 italic dark:text-gray-400 mt-2 text-sm">Currently unavailable.</p>
   </div>
 </Layout>

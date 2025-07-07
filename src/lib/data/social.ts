@@ -33,7 +33,7 @@ export const socials: Social[] = [
   {
     platform: SocialPlatform.Telegram,
     src: telegram,
-    link: "https://evarody.t.me",
+    link: "https://gusesa_gag.t.me",
     visibleOnMainpage: true,
   },
   {
