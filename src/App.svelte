@@ -8,12 +8,12 @@
 
   export let url: string = "";
 
-  const isProd = import.meta.env.MODE == "production";
+  const isMaintenance = import.meta.env.VITE_APP_MAINTENANCE === true;
 </script>
 
 <main class="font-hud">
   <Router {url}>
-    {#if isProd}
+    {#if isMaintenance}
       <Route path="/" component={Home} />
       <Route path="/projects" component={Projects} />
       <Route path="/contact" component={Contact} />
