@@ -15,7 +15,7 @@
       <img
         class="size-40 mx-auto rounded-full ring ring-gray-600"
         src={profile}
-        alt="Photo profile section"
+        alt="Profile section"
         loading="lazy"
         draggable="false"
       />
