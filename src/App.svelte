@@ -4,18 +4,25 @@
   import Projects from "@/routes/Projects.svelte";
   import Contact from "@/routes/Contact.svelte";
   import NotFound from "@/components/NotFound.svelte";
+  import Maintenance from "@/routes/Maintenance.svelte";
 
   export let url: string = "";
+
+  const isProd = import.meta.env.MODE == "production";
 </script>
 
 <main class="font-hud">
   <Router {url}>
-    <Route path="/" component={Home} />
-    <Route path="/projects" component={Projects} />
-    <Route path="/contact" component={Contact} />
-    <Route>
-      <NotFound />
-    </Route>
+    {#if isProd}
+      <Route path="/" component={Home} />
+      <Route path="/projects" component={Projects} />
+      <Route path="/contact" component={Contact} />
+      <Route>
+        <NotFound />
+      </Route>
+    {:else}
+      <Maintenance />
+    {/if}
   </Router>
 </main>
 
